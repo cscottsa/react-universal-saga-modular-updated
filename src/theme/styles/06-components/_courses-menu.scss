@@ -1,0 +1,52 @@
+.courses-menu{
+
+  &.dropdown__menu{
+    margin-top:22px;
+  }
+  
+  &.mobile-nav__courses{
+    padding-left:10px;
+  }
+  
+  h5{
+    text-transform: uppercase;
+    position:relative;
+    margin-left:-10px;
+  }
+
+  &__title{
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:5px;
+    margin-top:23px;    
+    text-transform: uppercase;
+    line-height:1.33;
+    letter-spacing: 0.6px;
+    @include breakpoint(lg) {
+      margin-top:30px;
+    }
+    &:first-child{
+      margin-top:0;
+    }
+  }
+
+  &__list{
+
+    >li{   
+      margin:10px 0;
+      font-size:12px;
+      line-height: 1.667;
+      font-weight:normal;
+      text-transform: uppercase;
+      >a{
+        display:block;        
+      }
+      .icon--course{float:right;}
+    }
+
+  }
+  
+  
+}
+
+

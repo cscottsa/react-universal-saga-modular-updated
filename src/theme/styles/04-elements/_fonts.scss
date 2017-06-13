@@ -1,0 +1,39 @@
+
+@font-face {
+  font-family: 'FuturaStd';
+  src: url("./fonts/futurastdbook.eot");
+  src: url("./fonts/futurastdbook.eot?#iefix") format("embedded-opentype"), url("./fonts/futurastdbook.woff") format("woff"), url("./fonts/futurastdbook.ttf") format("truetype"), url("./fonts/futurastdbook.svg#futurastdbook") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaStd';
+  src: url("./fonts/futurastdlight.eot");
+  src: url("./fonts/futurastdlight.eot?#iefix") format("embedded-opentype"), url("./fonts/futurastdlight.woff") format("woff"), url("./fonts/futurastdlight.ttf") format("truetype"), url("../fonts/futurastdlight.svg#futurastdlight") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaStd';
+  src: url("./fonts/futurastdbold.eot");
+  src: url("./fonts/futurastdbold.eot?#iefix") format("embedded-opentype"), url("./fonts/futurastdbold.woff") format("woff"), url("./fonts/futurastdbold.ttf") format("truetype"), url("./fonts/futurastdbold.svg#futurastdbold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+* {
+  font-family: 'Open Sans', 'sans-serif';  
+}
+
+body{
+font-size:14px;  
+  @include breakpoint(md) {
+    font-size:16px;
+  }
+}
+
+strong{font-weight:700;}
+
+a{color:$black; text-decoration: none;}
+a:hover{color:$action-green}

@@ -1,0 +1,189 @@
+
+.module-tile{
+  display:block;
+  background:$white;
+  padding:10px;  
+  margin-bottom:20px;
+  
+  &__body{
+    position:relative;    
+    text-align: center;
+    min-height:180px;
+  }
+  
+  &__icon{
+    padding:25px 0 30px;
+  }
+  
+  &__title{
+    font-size:16px;
+    line-height:1.33; 
+  }
+  
+  &__fav{
+    position:absolute; top:0; right:0;
+    
+    a:hover .icon svg:last-child{
+      position:relative; top:2.5px; right:2.5px;
+    }
+  }
+  
+}
+
+
+
+
+.module-bar{
+  display:block;
+  background:$white;
+  padding:10px;
+  margin-bottom:20px;
+  
+  &__icon{
+    float:left;
+    margin-top:10px;
+    .icon svg{      
+      width:30px;
+      height:30px;      
+    }
+    
+    @include breakpoint(sm) {
+    margin-top:0;  
+      .icon svg{
+        width:60px;
+        height:60px;
+      }
+    }
+  }
+  
+  &__title{
+    float:left; 
+    margin-left:10px;  
+    padding:13px 0;
+    font-size:18px;
+    font-weight:300;
+    line-height:1.42;
+    
+    @include breakpoint(sm) { 
+      font-size:24px;
+      padding:13px 0;
+    }
+    
+  }
+  
+  &__tray{
+    float:right;
+    padding:15px;
+    
+    .time{
+      display:inline-block;
+      padding:5px 0;
+      font-size:14px;
+      line-height:1.42;
+      vertical-align: middle;
+    }
+    .progress{
+      display:inline-block;
+      width:95px;
+      margin-left:35px;
+      text-align: right;
+      font-size:24px;
+      font-weight:300;
+      line-height:1;
+      padding:3px 0;
+      vertical-align: middle;
+    }
+    .icon{
+      margin-left:15px; 
+      svg{
+        width:30px;
+        height:30px;
+      }
+    }
+    
+  }
+
+  
+  
+  &--quiz,
+  &--quiz-disabled{
+    margin-top:50px;
+    padding:0 10px;
+  }
+  
+  &--quiz + .module-bar--quiz{
+    margin-top:0;
+  }  
+  
+  &--quiz-disabled{    
+    background:transparent;
+    border: dashed 1px $medium-grey;
+  }
+  
+}
+
+
+
+
+.module-progress{
+  display:block;
+  padding:10px;
+  margin-bottom:20px;
+  
+  &__icon{
+    float:left;   
+    svg{
+      width:60px; height:60px;
+    }
+  }
+  
+  &__content{
+    margin-left:75px;
+  }
+  &__title{    
+    margin:5px 0;
+  }
+  
+  &__graph{
+    position:relative;
+    height:30px;
+    &-track{
+      position:relative;
+      height:7px;
+      background-color:$grey;
+    }
+    &-fill{
+      position:absolute;
+      left:0;
+      height:7px;
+      background-color:$action-green;
+      transition:width .2s ease-out;
+    }
+    &-score,
+    &-target{
+      position:absolute;
+      top:14px;
+      left:0;
+      font-size:12px;
+      text-transform: uppercase;
+    }
+    &-target{
+      left:auto;
+      right:0;      
+      &:before{
+        content:"";
+        position:absolute;
+        top:-16px;
+        right:0;
+        height:11px;
+        width:2px;
+        background-color:$black;
+      }
+    }
+  }
+  
+  
+}
+
+
+

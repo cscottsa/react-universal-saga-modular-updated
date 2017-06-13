@@ -1,0 +1,51 @@
+.site-search-wrap{
+  position:relative;
+  z-index:100;
+}
+.site-search{
+  display:none;
+  @include breakpoint(lt-md){
+    display:none !important;
+  }  
+  
+  position:absolute; 
+  left:0; 
+  width:100%;  
+  padding:85px 0;
+  color:$white;
+  background: linear-gradient(to right, #009f7f, $old-mutual-green);  
+  
+  &__contents{
+    max-width:800px;
+    margin:0 auto;
+  }
+  
+  &__input{
+    float:left; 
+    width:680px;
+    .form-control{
+      border-radius:0;
+      border-color:$white;
+      font-size:24px; 
+      font-weight:300;
+      padding: 7px 20px 9px;
+      
+      
+      &::-webkit-input-placeholder{font-weight:300;}
+      &::-moz-placeholder{font-weight:300;}
+      &:-ms-input-placeholder{font-weight:300;}
+      &:-moz-placeholder{font-weight:300;}
+    }
+  }
+  &__btn{
+    float:right;
+    width:100px;
+    .btn{
+      min-width:100px;     
+    }
+  }
+  
+
+}
+
+

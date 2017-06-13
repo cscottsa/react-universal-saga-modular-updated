@@ -1,0 +1,183 @@
+.btn{
+  font-family: "FuturaStd", 'sans-serif'; 
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;	
+	cursor: pointer;
+	background: none;
+	border: 1px solid transparent;
+  border:none;
+  
+  border-radius:9px;
+	white-space: normal;
+	padding: 0 10px;	  
+  padding:1px 10px; /* no border */
+  
+  
+  min-width:150px;
+	line-height:30px;
+  -ms-touch-action: manipulation;	touch-action: manipulation;
+	-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; 
+	font-weight: 400; font-size: 14px; text-transform:uppercase; letter-spacing: 0.7px;
+	transition:all 0.2s ease-in-out;
+	outline:none;
+  
+  .icon{
+    position:relative;
+    display:inline-block;    
+    vertical-align: middle;
+    margin-right:-5px;
+    top:-1px;
+    svg{
+      display:block;
+      width:30px; height: 30px;
+    }
+  }
+  
+ }
+ 
+ .btn--md{ 
+  padding:4px 15px 4px;
+  padding:5px 15px 5px; /* no border */
+  letter-spacing: 0.8px;
+  
+  .icon{   
+    margin-right:-10px;    
+    svg{
+      width:35px;
+      height:35px;
+    }
+  }
+ }
+ 
+
+.btn--lg{
+  font-size:18px;
+  line-height:38px;
+  min-width:200px;
+  padding:6px 20px 4px;
+  padding:7px 20px 5px; /* no border */
+  
+  
+  letter-spacing: 0.9px;
+  
+  .icon{   
+    margin-right:-10px;    
+    svg{
+      width:40px;
+      height:40px;
+    }
+  }
+  
+}
+
+.btn--block{
+  display:block;
+  width:100%;
+}
+
+.btn--primary{
+  color:$white;
+  background-color:$action-green;
+  
+  &:hover,
+  &:focus{
+    color:$white;
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+.btn--secondary{
+  color:$dark-grey;
+  background-color:$white;  
+  border:1px solid $action-green;
+  
+  &:hover,
+  &:focus{
+    color:$white;
+    background-color:$action-green;   
+  }
+  
+  /* increase padding as includes border */
+  padding: 0 10px;
+  &.btn--md{
+    padding:4px 15px 4px;
+  }
+  &.btn--lg{
+    padding:6px 20px 4px;
+  }  
+}
+
+.btn--tertiary{
+  color:$white;
+  background-color:$orange;
+  
+  &:hover,
+  &:focus{
+    color:$white;
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+.btn--facebook{
+  font-size:14px;
+  color:$white;
+  background-color:$facebook-blue;
+  text-align: left;
+  
+  &:hover,
+  &:focus{
+    color:$white;
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon{float:right;}
+  
+}
+
+.btn--google{
+  font-size:14px;
+  color:$white;
+  background-color:$google-red;
+  text-align: left;
+  
+  &:hover,
+  &:focus{
+    color:$white;
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon{float:right;}
+}
+
+.btn--oldmutual{
+  font-size:14px;
+  color:$white;
+  background-color:$dark-green;
+  text-align: left;
+  
+  &:hover,
+  &:focus{
+    color:$white;
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon{float:right;}
+}
+
+
+
+
+
+/* last element please */
+.btn--disabled,
+.btn[disabled]{
+  cursor:not-allowed;
+  opacity:.5;
+  &:hover,
+  &:focus{
+    color:inherit;
+    background-color:inherit;
+  }
+}

@@ -1,0 +1,39 @@
+.video{
+  position:relative;
+  
+  video{
+    background:#000;
+    &::--webkit-media-controls-play-button{
+      display:none !important;
+      -webkit-appearance: none;
+    }
+    &::-webkit-media-controls-start-playback-button{
+      display:none !important;
+      -webkit-appearance: none;
+    }    
+  }
+  
+  &__play-btn{
+    cursor: pointer;
+    position:absolute;     
+    top:50%; left:50%;
+    margin-left:-20px;
+    margin-top:-20px;
+    opacity:0;
+    transition:opacity .2s ease-out;
+    
+    @include breakpoint(md) {
+      margin-left:-40px;
+      margin-top:-40px;
+     .icon svg{
+      width:80px;
+      height:80px;
+     }
+    }
+    
+    &.is-active{
+      opacity:1;
+    }
+  }
+  
+}

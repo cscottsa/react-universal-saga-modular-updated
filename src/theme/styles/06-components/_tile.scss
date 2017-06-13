@@ -1,0 +1,105 @@
+
+.tile{
+  display:block;
+  background:$white;
+  
+  &__body{    
+    background-color:$background;
+  }
+  &__tray{
+    padding:14px 22px;
+  }
+  
+  
+  // blog modifier
+  &--blog{
+  
+    &__category{
+      font-size:12px;
+      line-height:1.33;
+      text-transform: uppercase;
+      color:$dark-green;
+      margin-bottom:4px;
+    }
+    
+    h3{color:$black;}
+  
+    .tile__body{
+      padding:22px;
+      min-height:230px;     
+      
+      .icon{
+        margin-bottom:5px;
+        svg{width:40px; height:auto;}
+      }
+      
+    }
+    .tile__tray{
+      font-size:12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      span{
+        color:$action-green;
+      }
+    }
+  
+  }
+  
+  
+  // course modifier
+  &--course{  
+  
+    .tile__body{   
+      
+    }
+    .tile__tray{
+      padding:7px 22px;
+      
+      p{
+        float:left;
+        max-width:170px;
+        line-height:1.33;
+        padding:5px 0;
+        font-size:14px;      
+        font-weight: bold;  
+        color:$black;
+      }
+      
+      .course-levels{
+        float:right;
+      }
+     
+    }
+  
+  
+  }
+  
+  
+    // topic modifier
+   &--topic{
+    background:transparent;
+  
+    .tile__body{ 
+      padding:2px;
+      img{
+      
+      }
+    }
+    .tile__tray{
+      padding:22px 2px 0;
+      
+      p{               
+        font-size:14px;   
+        line-height:1.33; 
+        font-weight: bold;  
+        color:$black;
+        text-transform: uppercase;
+      }  
+     
+    }
+  
+  
+  }
+  
+  
+}

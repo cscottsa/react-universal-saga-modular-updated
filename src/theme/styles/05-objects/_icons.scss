@@ -1,0 +1,113 @@
+.icon{
+  vertical-align: middle;  
+  display:inline-block;
+  position: relative; 
+  margin-top:-1px;
+  svg{
+  vertical-align: top;
+  }
+}
+
+
+
+//--- Swap icons ---//
+
+// hover
+.icon-hover{
+  &--swap{
+
+    svg{display:none;}
+    svg:first-child{display:block;}
+
+    svg:nth-child(1){display:block;}
+    svg:nth-child(2){display:none;}
+  }  
+}
+
+*:hover > .icon-hover{
+  &--swap{
+    svg:first-child{display:none;}    
+    svg:last-child{display:block; animation:iconSwop .2s;}    
+  }  
+}
+
+@keyframes iconSwop{
+  0%{opacity:.2;}
+  100%{opacity:1;}
+}
+
+// selected
+.icon--selected{
+  svg{display:block;}
+  svg:first-child{display:none;}
+}
+
+
+//--- Fill change on hover ---//
+*:hover > .icon .fill{
+  transition:fill .2s ease-out;
+}
+*:hover > .icon-hover{  
+  
+  &--dark-green2 .fill{
+    fill:$dark-green2;    
+  }
+  
+  &--dark-green3 .fill{
+    fill:$dark-green3;
+  }
+  
+  &--dark-green4 .fill{
+    fill:$dark-green4;
+  }
+  
+  &--dark-grey2 .fill{
+    fill:$dark-grey2;
+  }
+  
+  &--action-green .fill{
+    fill:$action-green;
+  }
+  
+  &--white .fill{
+    fill:$white;
+  }
+  
+  &--action-green .fill{
+    fill:$action-green;
+  }
+  
+}
+
+
+/*--- Special social icons styles ---//
+.icon--social svg{
+  border-radius:50%;
+  border:1px solid transparent;    
+}
+
+.icon--facebook svg{
+  border-color:$facebook-blue;  
+  a:hover &{
+    background:$facebook-blue;
+  }
+}
+.icon--twitter svg{
+  border-color:$twitter-blue;  
+  a:hover &{
+    background:$twitter-blue;
+  }
+}
+.icon--linkedin svg{
+  border-color:$linkedin-blue;  
+  a:hover &{
+    background:$linkedin-blue;
+  }
+}
+.icon--email svg{
+  border-color:$dark-green;  
+  a:hover &{
+    background:$dark-green;
+  }
+}
+*/

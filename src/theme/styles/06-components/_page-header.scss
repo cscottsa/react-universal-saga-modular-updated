@@ -1,0 +1,41 @@
+.page-header{
+  
+  padding:50px 0;
+  text-align: center;
+  color:$white;
+  background: linear-gradient(to right, #009f7f, $old-mutual-green);
+
+
+
+  
+
+
+  &--course{
+  
+    padding-bottom:30px;
+    
+    p{
+      margin:5px 0 15px;
+    }    
+    .course-levels .icon svg{
+      width:35px; height:35px;
+    }
+  
+  }
+  
+  
+  
+  &--search{
+    display:none;
+    @include breakpoint(lt-md){
+      display:none !important;
+    }   
+    @include breakpoint(md) {
+      padding:85px 0;
+    }
+  }
+  
+  
+  
+
+}

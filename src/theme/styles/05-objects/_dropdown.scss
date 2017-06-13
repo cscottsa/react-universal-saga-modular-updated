@@ -1,0 +1,32 @@
+
+.dropdown{
+  position:relative;  
+  
+  &__menu{
+    /*display:none;*/    
+    visibility: hidden;
+    opacity:0;
+    transition: visibility 0s .2s, opacity .2s .2s ease-out;
+    
+    position:absolute;
+    top:100%;
+    left:0;
+    z-index:2000;
+    float: left;
+    min-width: 270px;
+    background:$white;
+    margin-top:0;
+    padding:20px;    
+    box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  &.is-open .dropdown__menu,
+  &:hover .dropdown__menu,
+  &:focus .dropdown__menu{
+    /*display:block;*/    
+    visibility: visible;
+    opacity:1;   
+  }  
+  
+}

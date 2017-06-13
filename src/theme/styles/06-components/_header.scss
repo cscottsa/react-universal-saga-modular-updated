@@ -1,0 +1,337 @@
+.sticky-header{
+  position:relative;
+  z-index:999;
+  height:61px;
+  @include breakpoint(md) {
+    height:81px;
+  }
+  &__inner{
+    position:fixed; width:100%; top:0;     
+  }  
+  &--logged{
+    height:111px;
+    @include breakpoint(md) {
+      height:131px;
+    }
+  }  
+}
+
+.mobile-nav-active{
+  height:100%;
+  body{
+    height:100%;
+  }
+  .sticky-header{
+    height:100%;    
+    &__inner{
+      overflow-y:auto;
+      height:100%;
+    }
+  }  
+}
+
+
+.header{
+  position:relative;
+  height:60px;
+  padding:17px 0 13px;
+  margin-bottom:1px;
+  background:$white;
+  
+  @include breakpoint(md) {
+    height:80px;
+    padding:20px 0;
+  }
+
+  &:after{
+    content:"";
+    position:absolute;
+    bottom:-1px;
+    width:100%;
+    height:1px;
+    background: linear-gradient(to bottom, #8fd30a 0%,#008365 100%); 
+  }
+ 
+  >.container-fluid-outer{
+    position:relative;
+  }
+
+  .logo {
+    position:absolute;
+    left:50%;
+    display:block;
+    width:150px;
+    margin-left:-75px;
+    top:-5px;
+    @include breakpoint(md) {
+      top:-9px;
+      width:198px;
+      margin-left:-99px;
+    }
+    img{ 
+      width:100%; 
+      height:auto;  
+      display:block;
+    }
+  }
+  
+  &__left{
+    float:left;  
+    position:relative;    
+    img{
+      height:30px;
+      width:auto;
+      position: absolute; left:0;      
+      clip:rect(0,30px,30px,0);     
+    }
+    @include breakpoint(md) {
+      margin:2px 0;
+      img{
+        clip:auto;
+        height:36px;
+        width:auto;
+      }
+    }
+  }
+  
+  &__right{
+    float:right;
+   
+    
+    .navbar-toggle{
+      padding:6px;
+      
+      &__bar{
+        display: block;
+        width: 20px;
+        height: 2px; 
+        background:$old-mutual-green;
+        transition: transform .2s ease-out;
+        
+        & +.navbar-toggle__bar{
+          margin-top:4px;
+        }
+        
+      }
+      
+      &.is-active{
+        .navbar-toggle__bar{
+          margin:0;
+          transform:rotate(45deg);
+        }        
+        .navbar-toggle__bar:nth-child(2){
+          display:none;
+        }        
+        .navbar-toggle__bar:last-child{
+          margin-top:-2px;
+          transform: rotate(-45deg);
+        }
+      }
+      
+      @include breakpoint(md) {
+        display:none;
+      }
+      
+    }
+    
+    
+    
+  }
+  
+  
+  &__nav{
+    display:none;
+    @include breakpoint(md) {
+      display:block;
+    }
+    float:left;
+  
+    >li{
+      float:left;
+      padding:0;
+      font-size:12px;
+      font-weight:600;
+      letter-spacing: 0.6px;      
+      line-height:1.667;
+      border-left:1px solid #e3e6ee;
+      >a{
+        display:block;
+        padding:10px 16px 9px;
+        text-transform: uppercase;
+        .caret{
+          position:relative; 
+          top:-1px;    
+          margin-left:2px;
+        }
+        @include breakpoint(lg) {
+          padding-left:24px;
+          padding-right:24px;
+        }
+      }      
+      &.search{
+        border-left:none;
+        >a{
+          padding:9px 24px 9px;
+        }
+      }
+      &.logged{        
+        .icon{         
+          margin:-6px 15px -5px 0;          
+          svg{
+            width:30px; height:30px;
+          }
+        }
+      }
+      
+    }
+  
+    
+  }
+  
+  &__signup{
+    display:none;
+    @include breakpoint(md) {
+      display:block;
+    }
+    float:left;
+    margin-left:2px;
+    .btn{
+      min-width:100px;
+      @include breakpoint(lg) {
+        min-width:120px;
+      }
+    }    
+  } 
+ 
+ 
+}
+
+
+.mobile-nav-wrap{
+  position:relative;
+  z-index:2000;
+}
+
+.mobile-nav{
+  display:none;
+  background:$white;
+  
+  position:absolute; left:0; top:0; width:100%;
+  
+  padding:30px 0 20px;
+  
+  @include breakpoint(md) {
+    display:none !important;
+  }
+  
+  &.is-open{
+    
+  }
+  
+  >.container-outer{
+    max-width:700px;
+  }
+  
+  
+  &__btns{  
+    position:relative;
+    margin:0 -5px 30px;
+  }
+  
+  &__btns-col{
+    float:left;
+    width:50%;
+    padding:0 5px;
+  }
+  
+  &__user{  
+    @include clearfix;
+    text-align: right;
+    font-size:14px;
+    font-weight:600;
+    text-transform: uppercase;
+    padding-bottom:20px;
+    .icon{
+      margin-right:5px;
+    }
+    a{
+      color:$action-green;
+    }
+  }
+  &__user-name{
+    float:left;
+  }
+  
+  
+  &__search{
+    margin-bottom:30px;
+    position:relative;
+    
+    .form-control{
+      padding-right:45px;     
+    }
+  }
+  
+  &__search-btn{
+    position:absolute; 
+    right:10px; 
+    top:50%;
+    margin-top:-16px;
+    padding:5px;
+  }
+  
+}
+
+
+
+.user-nav{  
+  padding:15px 0;
+  background:$dark-green;
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  @include breakpoint(sm) {
+    box-shadow:none;
+  }
+  
+  ul{
+    li{
+      margin:0 22px; 
+      display:inline-block;
+      font-size:12px;
+      font-weight:600;
+      text-transform: uppercase;
+      letter-spacing:0.6px;
+      line-height:20px;
+      &:first-child{
+        margin-left:0;
+      }
+      &:last-child{
+        margin-right:0;
+      }
+      a{
+        color:$white;
+      }      
+      .icon{
+        margin-right:7px;
+      }
+      @include breakpoint(xs) {
+        .icon{
+          margin-right:0;
+        }
+        .title{
+          display:none;
+        }
+        .icon svg{
+          width:30px;
+          height:30px;
+        }
+      }
+      
+      @include breakpoint(sm) {
+           
+        
+      }      
+    }
+  }  
+  
+}

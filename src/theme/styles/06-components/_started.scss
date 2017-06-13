@@ -1,0 +1,122 @@
+
+.started-banner{
+  position:relative;
+  margin-top:39px;
+ 
+  
+  @include breakpoint(md) {
+    margin-top:52px;
+  }
+  
+  
+  @media (min-width: 1440px) { 
+    >img,
+    >picture{
+      max-width:1440px;
+    }    
+  }
+  
+  
+  &__content{
+   
+    position:absolute; top:12px; left:0; width:100%;
+    text-align: center;  
+    
+    @include breakpoint(md) {
+      top:35px;
+    }
+  }
+  
+  &__copy{
+    
+    max-width:450px;
+    margin:0 auto;
+  
+    h1{
+      color:$dark-green;
+      margin-bottom:.5em;
+    }
+    p{
+      line-height:1.63;
+      margin-bottom:1.875em;    
+    }
+    
+    @include breakpoint(lg) {
+      .btn{
+        min-width:240px;
+      }
+    }
+    
+  }
+  
+ 
+  
+}
+
+
+
+
+.started-section{
+  padding:40px 0 30px;
+  
+  @include breakpoint(md) {
+    padding:70px 0;
+  }
+  
+  &__img{
+    margin-bottom:30px;
+    @include breakpoint(md) {
+      padding-right:25px;
+      margin-bottom:0;
+    }
+    img{
+      display: block;
+      width:100%;
+      max-width:400px;
+      height:auto;
+      margin:0 0 0 auto;
+    }
+  }
+  
+  .h1{
+    color:$dark-green;
+    text-align: center;
+    margin-bottom:30px;
+    @include breakpoint(md) {
+      margin-bottom:0;
+    }
+  }
+  
+  
+  &__copy{   
+    margin:0 auto 0 0; 
+    padding:15px 0;
+   
+   .title{
+      color:$dark-green;
+      font-size:14px;
+      text-transform: uppercase;
+    }
+    .h2{
+      font-weight:400;
+    }  
+    p{
+      margin:1em 0;
+    }
+    .course-levels{
+      margin-bottom:27px;
+    }
+    
+    
+    @include breakpoint(xs) {
+      .btn{display:block; width:100%;}
+    }
+    @include breakpoint(md) {
+      padding:15px 0 15px 25px;
+      min-width:380px;
+      width:60%;      
+      .h2{font-weight:300;}
+    }
+  }
+ 
+}

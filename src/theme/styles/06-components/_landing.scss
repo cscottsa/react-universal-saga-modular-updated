@@ -1,0 +1,189 @@
+
+.landing-video{
+  position:relative;
+  margin-top:39px;
+  
+  @include breakpoint(md) {
+    margin-top:52px;
+  }
+  
+  @media (min-width: 1440px) { 
+    >img,
+    >picture{
+      max-width:1440px;
+    }
+  }
+ 
+  
+  &__content{
+   
+    position:absolute; top:12px; left:0; width:100%;
+    text-align: center;
+
+    h1{
+      color:$dark-green;
+      margin-bottom:.75em;
+    }
+    
+    @include breakpoint(md) { 
+      top:12px;
+      h1{
+        margin-bottom:1.5em;
+      }
+    }
+    
+  }
+  
+  &__play{
+    .play-btn{
+      display:inline-block;
+      margin-bottom:18px;      
+      .icon svg{
+        @include breakpoint(md) { 
+          width:80px;
+          height:80px;
+        }
+      }
+    }
+    .caption{
+      font-size:12px;
+      font-weight:bold;
+      color:$action-green;
+      text-transform: uppercase;
+    }
+  }
+  
+}
+
+
+
+.landing-intro-wrap{
+  border-bottom:1px solid $grey;
+  @include breakpoint(md) {
+    border-bottom:none;
+  }
+}
+.landing-intro{
+  text-align: center;  
+  padding:40px 0 30px;  
+  max-width:720px;
+  margin:0 auto;
+  
+  @include breakpoint(sm) {
+    padding:60px 0 70px;
+    border-bottom:none;
+  }
+  
+  h2{}
+  p{}
+  
+  &__btns{    
+    position: relative;
+    margin: 48px auto 0;
+    @include breakpoint(md) {
+      max-width:75%;
+    }
+  }
+  
+  &__btns-col{
+    margin-bottom:10px;
+    @include breakpoint(sm) {
+      float: left;
+      width: 50%;
+      padding: 0 5px;
+      margin-bottom:0;
+    }
+  }  
+}
+
+
+
+
+.landing-section{
+  padding:30px 0 0;
+  
+  &--title{
+    padding:40px 0 0;
+    @include breakpoint(md) {
+      padding:60px 0 0;
+    }
+  }
+  
+  &--alt{
+    padding:0 0 10px;
+    border-bottom:1px solid $grey;
+    
+    @include breakpoint(md) {
+      padding:30px 0 0;
+      border-bottom:none;
+    }
+  }
+  
+  .h1{
+    color:$dark-green;
+    text-align: center;
+    margin-bottom:30px;
+    @include breakpoint(md) {
+      margin-bottom:0;
+    }
+  }
+  
+  
+  &__copy{   
+    margin:0 auto; 
+    padding:20px 0;
+    .h2{font-weight:400;}    
+    
+    @include breakpoint(xs) {
+      .btn{display:block; width:100%;}
+    }  
+    @include breakpoint(md) {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      min-width:380px;
+      width:60%;      
+      .h2{font-weight:300;}
+    }
+  }
+ 
+}
+
+
+
+.landing-signup{  
+  text-align: center;
+  padding:40px 0 30px;
+  border-bottom:1px solid $grey;  
+  
+  @include breakpoint(md) {
+    padding:120px 0 100px;
+    border-color:$light-grey;
+    background:url(./images/start-now@2x.png) center center no-repeat;
+    background-size:contain;
+  }  
+  
+  h2{
+    line-height:1.25;
+    font-weight:400;
+    margin-bottom:30px;  
+    color:$dark-green;    
+    @include breakpoint(md) {
+      font-weight:300;
+      margin-bottom:60px;
+    }
+    strong{
+      text-transform: uppercase;
+    }
+  }
+  
+  @include breakpoint(xs) {    
+    .btn{
+      display:block; width:100%;
+    }
+  }
+  
+  
+  
+}
+
