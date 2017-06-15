@@ -73,6 +73,14 @@
     fill:$white;
   }
   
+  &--black .fill{
+    fill:$black;
+  }
+  
+  &--grey .fill{
+    fill:$grey;
+  }
+  
   &--action-green .fill{
     fill:$action-green;
   }

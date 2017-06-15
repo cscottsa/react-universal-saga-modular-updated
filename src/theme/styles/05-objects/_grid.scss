@@ -37,7 +37,7 @@
     width:960px;
   }  
   .container-outer{
-    width:1000px;
+    width:1024px;
   }
 }
 @include breakpoint(lg) {  
@@ -291,6 +291,10 @@
   .col-1{margin:0 auto;}
 }
 
+.row--profile{
+  .col-1{margin:0 auto;}
+}
+
 .row--course{
   .col-1{}
   .col-2{}
@@ -307,11 +311,17 @@
   .row--article{ 
     .col-1{max-width:640px;} 
   }
+  .row--profile{ 
+    .col-1{max-width:640px;} 
+  }
   
 }
 @include breakpoint(md) {  
   .row--article{ 
     .col-1{max-width:820px;}
+  }  
+  .row--profile{ 
+    .col-1{max-width:720px;}
   }
   
   .row--course{

@@ -23,6 +23,12 @@
     height: auto;
     margin:0 auto;
 }
+.img-max{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin:0 auto;
+}
 
 .text-center{
   text-align: center;
@@ -40,13 +46,21 @@
   transform:translateY(-50%);
 }
 
-
 .pull-right {
   float: right !important;
 }
 .pull-left {
   float: left !important;
 }
+
+
+.sep{
+  border-bottom:1px solid $grey;
+  margin:20px 0 25px;
+}
+
+
+
 .hide {
   display: none !important;
 }

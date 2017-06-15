@@ -1,4 +1,4 @@
-//*** Common classes ***//
+//*** Styling classes ***//
 
 
   //--- backgrounds ---//
@@ -11,6 +11,10 @@
     &--background-fadeup{
       background-image: linear-gradient(to top, $background, $white);
     }
+    
+    &--orange-fade{
+      background-image: linear-gradient(to top, #ffb866, #fad961);
+    }  
     
   }
   

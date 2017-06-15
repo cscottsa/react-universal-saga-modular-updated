@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import { Landing, CarouselTopics } from 'components';
+
 import { fetchTopics } from './actions';
+
 
 class LandingPage extends Component {
 
@@ -12,11 +15,12 @@ class LandingPage extends Component {
 
   render() {
     console.log('topics', this.props.topics);
+
     return (
-      <div>
-        <h1>Welcome to Old Mutual Moneyversity</h1>
-        <h2>This is the landing Page</h2>
-      </div>
+      <main className="page-content">
+        <Landing />
+        <CarouselTopics />
+      </main>
     );
   }
 }
@@ -34,4 +38,3 @@ LandingPage.propTypes = {
   fetchTopics: PropTypes.func,
   topics: PropTypes.object
 };
-

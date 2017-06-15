@@ -16,6 +16,17 @@ p{line-height:1.33;}
 .font-semibold{font-weight:600;}
 .font-bold{font-weight:700;}
 
+.label{
+  font-size:12px;
+  line-height:1.33;
+  text-transform: uppercase;
+  color:$black;
+  &--lowercase{
+    text-transform: none;
+  }
+  
+}
+
 
  @include breakpoint(md) {
  

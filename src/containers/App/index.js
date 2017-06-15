@@ -5,15 +5,13 @@ import { Header, Footer } from 'components';
 
 export default function App(props) {
   return (
-    <div>
+    <div className="page-wrapper">
       <Helmet
         title="React Universal Saga Modular"
         meta={[{ property: 'og:site_name', content: 'React Universal Saga Modular' }]}
       />
       <Header />
-      <div className="wrapper">
-        {props.children}
-      </div>
+      {props.children}
       <Footer />
     </div>
   );

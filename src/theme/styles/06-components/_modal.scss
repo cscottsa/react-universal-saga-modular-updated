@@ -101,7 +101,7 @@
       }
     }    
     &__content{
-      padding:20px 20px 30px;      
+      padding:20px 20px 40px;      
       .h2{
         color:$dark-green;
         margin-bottom:20px;
@@ -113,7 +113,7 @@
       }
       
       @include breakpoint(md) {
-        padding:35px 30px;
+        padding:35px 30px 60px;
         .h2{
           margin-bottom:35px;
           &+p{
@@ -169,7 +169,7 @@
     background: $white;
     padding: 0;
     text-align: center;
-    max-width: 730px;
+    max-width: 1260px;
     margin: 40px auto;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
     opacity:0;

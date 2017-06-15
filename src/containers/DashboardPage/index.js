@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+// import PropTypes from 'prop-types';
+
+import { Dashboard } from 'components';
 
 class DashboardPage extends Component {
 
+  componentDidMount() {
+    // this.props.fetchTopics();
+  }
+
   render() {
     return (
-      <div>
-        <h2>This is the Dashboard Page</h2>
-      </div>
+      <main className="page-content">
+        <Dashboard />
+      </main>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  fetchTopics: state.fetchTopics,
-  topics: state.topics
+const mapStateToProps = () => ({
+  // fetchTopics: state.fetchTopics,
+  // topics: state.topics
 });
 
-export default connect(mapStateToProps, {
-})(DashboardPage);
+export default connect(mapStateToProps, {})(DashboardPage);
+
+// DashboardPage.propTypes = {
+//   topics: PropTypes.object
+// };

@@ -10,9 +10,9 @@
   }
   
   &__wrap{
-    position:relative;
+    position:relative;    
     @include breakpoint(xs) {
-      max-width:250px;
+      max-width:254px;
       margin-left:0;
     }
   }
@@ -20,8 +20,7 @@
   &__outer{
     position:relative;
     overflow:hidden;
-    z-index:20;
-    
+    z-index:20;    
     @include breakpoint(xs) {
       overflow:visible;
     }
@@ -30,7 +29,11 @@
   &__stage{
     position:relative;
     -ms-touch-action: pan-Y;
-    width: 100%;   
+    width: 100%; 
+  }
+  
+  &__item{
+   padding:0px 4px 0 1px;
   }
   
   &__nav{
@@ -58,7 +61,24 @@
     
   } 
   
-
+  
+  &--fixed{
+    padding-bottom:35px;
+    
+    .carousel__wrap{
+      max-width:none;
+    }
+    .carousel__outer{
+      padding-bottom:10px;  
+    }   
+    .carousel__item{
+      width:300px;      
+    }
+    .carousel__nav-control{
+      top:47%;
+    }
+  }
+  
 }
 
 

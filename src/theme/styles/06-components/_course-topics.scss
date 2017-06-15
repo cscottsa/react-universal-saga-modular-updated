@@ -1,0 +1,23 @@
+.course-topics{
+  
+  &__hero{
+  
+  }
+  
+  &__intro{
+    text-align: center;
+    padding: 40px 0 30px;
+    max-width: 720px;
+    margin: 0 auto;
+    
+    @include breakpoint(md) {
+      padding: 50px 0 45px;      
+    }
+    
+    h1{
+      color:$dark-green;
+    }
+    
+  }
+
+}

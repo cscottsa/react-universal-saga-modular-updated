@@ -115,11 +115,10 @@
       }
       
       &.is-active{
-        .navbar-toggle__bar{
-          margin:0;
+        .navbar-toggle__bar{    
           transform:rotate(45deg);
         }        
-        .navbar-toggle__bar:nth-child(2){
+        .navbar-toggle__bar:first-child{
           display:none;
         }        
         .navbar-toggle__bar:last-child{
@@ -285,13 +284,17 @@
 
 
 .user-nav{  
+  position:relative;
+  z-index:110;
   padding:15px 0;
   background:$dark-green;
   text-align: center;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  /*
   @include breakpoint(sm) {
     box-shadow:none;
   }
+  */
   
   ul{
     li{
@@ -308,11 +311,16 @@
       &:last-child{
         margin-right:0;
       }
+      
+      &.is-active .icon .fill{
+        fill:$action-green;
+      }
+      
       a{
         color:$white;
       }      
       .icon{
-        margin-right:7px;
+        margin-right:7px;        
       }
       @include breakpoint(xs) {
         .icon{

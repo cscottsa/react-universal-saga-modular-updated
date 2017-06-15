@@ -2,15 +2,12 @@
   position:relative;
   
   video{
-    background:#000;
-    &::--webkit-media-controls-play-button{
-      display:none !important;
-      -webkit-appearance: none;
-    }
+    background:#000; 
     &::-webkit-media-controls-start-playback-button{
       display:none !important;
       -webkit-appearance: none;
-    }    
+    } 
+
   }
   
   &__play-btn{

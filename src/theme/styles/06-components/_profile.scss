@@ -1,0 +1,172 @@
+.profile-intro{
+  text-align: center;
+  padding:40px 0 20px;
+  @include breakpoint(md) {
+    padding:70px 0 35px;
+  }  
+  h1{
+    color:$dark-green;    
+  }
+  p{
+    margin-top:10px;
+  }  
+}
+
+
+.profile-card{
+  margin-bottom:30px;
+  border-radius:34px;
+
+  @include breakpoint(md) {
+    margin-bottom:50px;  
+  }
+  
+  &__header{    
+    padding:14px 0 13px;
+    text-align: center;
+    border-radius:34px 34px 0 0;
+    background-image: linear-gradient(to right, #8fd30a, #008365);
+    
+    @include breakpoint(lt-md) {
+      img{
+        width:150px;
+        height:35.6px;
+      }
+    }
+  }
+  
+  &__body{  
+    padding:25px 30px 17px;
+    border-radius:0 0 34px 34px;
+    background:$white;  
+    
+    .label{
+      margin-bottom:4px;
+      position:relative;
+      padding-right:35px;    
+      
+      &__sparks{
+        position:absolute; right:0; top:0;
+        
+        .icon{ 
+          margin-top:-2px;
+          svg{
+            width:15px; 
+            height:15px;
+          }
+        }
+      }
+      
+      & +.btn{
+        margin-top:7px;
+      }
+      
+     }
+  } 
+  
+ 
+  &__img{
+   margin-bottom:20px;
+   
+   .label{
+    margin-bottom:13px;
+   }
+   
+   &-edit{    
+    cursor: pointer;    
+    img{
+      border-radius:9px;
+      margin:0 auto 13px;
+    }
+   }
+   
+  }
+  &__details{
+    overflow: hidden;
+    
+    .row{
+      margin-left:-5px;
+      margin-right:-5px;
+    }
+    [class^='col-']{
+      padding-left:5px;
+      padding-right:5px;
+    }
+    
+    .form-group{
+      margin-bottom:13px;
+    }
+    
+    select.form-control{
+      margin-bottom:10px;
+    }
+    
+  }
+  
+  &__social-linked{
+    padding-top:4px;
+    .icon{
+      margin-right:10px;
+    }
+  }
+  
+  
+  @include breakpoint(sm) {
+    &__img{
+      float:left;
+      width:170px;
+      margin-bottom:0;
+    }
+    &__details{
+      margin-left:200px;      
+      select.form-control{
+        margin-bottom:0;
+      }
+    }    
+  }
+  @include breakpoint(md) {
+    &__img{ 
+      width:230px;
+    }
+    &__details{
+      margin-left:260px;
+    }    
+  }
+  
+  
+  &--extra{
+    @include breakpoint(md) {
+      margin-bottom:40px;
+    }  
+    .profile-card__body{  
+      @include breakpoint(md) {
+        padding-left:50px;
+        padding-right:50px;
+      }      
+    }
+  }
+  
+  
+}
+
+.profile-btns{
+  text-align: center;
+  margin-bottom:40px;
+  
+  .btn{
+    display:block;
+    margin-bottom:10px;
+  }  
+  
+  @include breakpoint(sm) {    
+    .btn{
+      display:inline-block;
+      padding-left:20px;
+      padding-right:20px;
+      margin:0 10px;
+    }
+  }
+  @include breakpoint(md) {
+    margin-bottom:60px;
+  }
+}

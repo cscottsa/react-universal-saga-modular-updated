@@ -48,8 +48,8 @@ class Header extends Component {
   }
 
   render() {
-    const urlOldMutual = require('../../theme/images/svg/old-mutual.svg');
-    const urlMoneyversity = require('../../theme/images/svg/Moneyversity.svg');
+    const urlOldMutual = require('../../../theme/images/svg/old-mutual.svg');
+    const urlMoneyversity = require('../../../theme/images/svg/Moneyversity.svg');
 
     return (
       <div className="sticky-header">
@@ -77,13 +77,13 @@ class Header extends Component {
                 </button>
 
                 <ul className="header__nav">
-                  <li className="search">
-                    <a href="#placeholderHref" data-toggle="#site-search" data-toggle-speed="200" data-toggle-animate="true">
-                      <i className="icon">
-                        <IconSearch />
-                      </i>
-                    </a>
-                  </li>
+                  {/*<li className="search">*/}
+                  {/*<a href="#placeholderHref" data-toggle="#site-search" data-toggle-speed="200" data-toggle-animate="true">*/}
+                  {/*<i className="icon">*/}
+                  {/*<IconSearch />*/}
+                  {/*</i>*/}
+                  {/*</a>*/}
+                  {/*</li>*/}
                   {/* <!-- apply .is-open className to .dropdown on hover/focus --> */}
                   <li className="dropdown">
                     <a href="#placeholderHref">Courses

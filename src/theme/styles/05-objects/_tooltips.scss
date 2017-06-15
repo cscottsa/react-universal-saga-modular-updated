@@ -69,6 +69,7 @@
 }
 
 
+
 /* Directions */
 
 
@@ -161,4 +162,24 @@
 .tooltip--advanced:after{
   left:83.5%;
 }
+
+
+
+/* -- Skins -- */
+
+  /* white */
+  .tooltip--white{
+    &:after{
+      background-color: $white;
+      color: $dark-green;
+    }
+    &.tooltip--top:before {
+      border-top-color: $white;
+    }
+    &.tooltip--bottom:before{
+      border-bottom-color: $white;
+    }
+  }
+  
+  
 
